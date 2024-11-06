@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Orders</title>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .header {
+            background-color: #ff3f6c;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            border-radius: 0 0 20px 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+         .header img {
+            padding: 40px;
+            position: absolute;
+            left: 20px;
+            height: 100px; /* Increased from 40px to 60px */
+            }
+
+        .orders {
+            margin: 20px auto;
+            max-width: 800px;
+            padding: 20px;
+            border-radius: 20px;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .orders h2 {
+            margin-bottom: 20px;
+        }
+        .search-filter {
+            padding: 10px;
+            display: flex;
+            margin-bottom: 20px;
+            position: relative; /* Add this line for positioning the search icon */
+            border-radius: 30px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            background: #fff;
+        }
+        .search-filter input {
+            padding: 15px 20px 15px 50px;
+            border: none;
+            flex-grow: 1;
+            border-radius: 30px;
+            font-size: 16px;
+            background: #f0f0f0;
+        }
+        .search-filter button {
+            padding: 15px 20px;
+            background-color: #b3a9a9;
+            border: none;
+            cursor: pointer;
+            border-radius: 30px;
+            margin-left: 10px;
+            color: white;
+            transition: background-color 0.3s;
+        }
+        .search-filter button:hover {
+            background-color: #9a8f8f;
+        }
+        .search-filter .fa-search {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #756e6e;
+        }
+        .order-details {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+            border-radius: 20px;
+            background: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            transition: box-shadow 0.3s;
+        }
+        .order-details:hover {
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+        .order-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .order-item img {
+            margin-right: 20px;
+            width: 100px;
+            height: 100px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+        .item-details p {
+            margin: 5px 0;
+            color: #333;
+        }
+        .order-item button {
+            background-color: #4CAF50; /* Green background */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 30px;
+            transition: background-color 0.3s;
+            margin-left: auto;
+        }
+        .order-item button:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header">
+        <img src="form1/form/Assests/my8595w8f4-myntra-logo-what-is-the-myntra-logo-issue-quora.png" alt="Myntra Logo">
+        <h1>My Orders</h1>
+    </header>
+    <main>
+        <section class="orders">
+            <div class="search-filter">
+                <i class="fas fa-search"></i> <!-- Search icon -->
+                <input type="text" id="search-input" placeholder="Search in orders">
+                <button onclick="filterOrders()">Search</button>
+            </div>
+            <section class="order-details">
+                <h3>Delivered</h3>
+                <p>On Tue, 26 Dec 2023</p>
+                <div class="order-item">
+                    <img src="https://assets.myntassets.com/f_webp,dpr_1,q_10,w_200,c_limit,fl_progressive/assets/images/productimage/2021/6/23/f1290265-599b-4218-8b57-afdcb477da581624462782544-1.webp" alt="Product image">
+                    <div class="item-details">
+                        <p>ADIDAS Men Grey Clinch-X M Running Shoes</p>
+                        <p>Size: 7</p>
+                        <p>Exchange/Return window closed on Tue, 9 Jan 2024</p>
+                        <a href="form2.html" class="button-link">
+                            <button>Re-Sell</button>
+                          </a>
+                    </div>
+                </div>
+            </section>
+            <section class="order-details">
+                <h3>Refund Credited</h3>
+                <p>On Thu, 26 Oct 2023</p>
+                <div class="order-item">
+                    <img src="https://assets.myntassets.com/f_webp,dpr_1,q_10,w_200,c_limit,fl_progressive/assets/images/10742386/2019/11/29/502d71d2-3804-4e9a-840c-89a43649f8ca1575019984587-Tokyo-Talkies-Women-Mustard-Orange-Solid-Hooded-Sweatshirt-4-1.webp" alt="Product image">
+                    <div class="item-details">
+                        <p>Women Mustard Orange Solid Hooded Sweatshirt</p>
+                        <p>Size: S</p>
+                        <p>Exchange/Return window closed on Thu, 9 Nov 2023</p>
+                    </div>
+                </div>
+            </section>
+            <section class="order-details">
+                <h3>Delivered</h3>
+                <p>On Wed, 2 Aug 2023</p>
+                <div class="order-item">
+                    <img src="https://assets.myntassets.com/f_webp,dpr_1,q_10,w_200,c_limit,fl_progressive/assets/images/11711840/2020/10/13/c4034971-d71f-416c-9d48-82f1c39127c01602590834834MastHarbourWomenSeaGreenYellowFloralPrintedCropTop1.webp" alt="Product image">
+                    <div class="item-details">
+                        <p>Sea Green & Yellow Floral Lace Crop Top</p>
+                        <p>Size: S</p>
+                        <p>Exchange/Return window closed on Wed, 16 Aug 2023</p>
+                        <a href="form2.html" class="button-link">
+                            <button>Re-Sell</button>
+                          </a>
+                    </div>
+                </div>
+            </section>
+            <section class="order-details">
+                <h3>Delivered</h3>
+                <p>On Mon, 26 Dec 2022</p>
+                <div class="order-item">
+                    <img src="https://assets.myntassets.com/f_webp,dpr_1,q_10,w_200,c_limit,fl_progressive/assets/images/productimage/2020/12/1/8bdf38e3-913d-48e4-94bf-22347fc705fd1606815094334-1.webp" alt="Product image">
+                    <div class="item-details">
+                        <p>Women White Slim Fit High-Rise Clean Look Stretchable Jeans</p>
+                        <p>Size: 28</p>
+                        <p>Exchange/Return window closed on Mon, 9 Jan 2023</p>
+                        <a href="form2.html" class="button-link">
+                            <button>Re-Sell</button>
+                          </a>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </main>
+    <script>
+        function filterOrders() {
+            // Get the search input value
+            const searchText = document.getElementById('search-input').value.toLowerCase();
+            // Get all the order items
+            const orderItems = document.querySelectorAll('.order-item, .refunded-item');
+            // Loop through the order items and hide those that don't match the search text
+            orderItems.forEach(item => {
+                const itemText = item.textContent.toLowerCase();
+                if (itemText.includes(searchText)) {
+                    item.style.display = '';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

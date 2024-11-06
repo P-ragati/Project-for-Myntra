@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 50px;
+        }
+        .header img {   
+            height: 40px;
+        }
+        .header nav a {
+            text-decoration: none;
+            color: #333;
+            margin-left: 20px;
+            font-weight: bold;
+            position: relative;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+        .header nav a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 100%;
+            height: 2px;
+            background-color: #ff3f6c;
+            transform: scaleX(0);
+            transform-origin: bottom right;
+            transition: transform 0.3s ease;
+        }
+        .header nav a:hover {
+            color: #ff3f6c;
+        }
+        .header nav a:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 50px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .carousel {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            border-radius: 50px;
+            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+        }
+        .product-images {
+            display: flex;
+            gap: 40px; /* Adjust the gap between images */
+            overflow-x: auto; /* Enable horizontal scrolling for overflow */
+            scroll-snap-type: x mandatory; /* Enable snapping behavior for scrolling */
+        }
+
+        .product-images img {
+            max-width: 100%;
+            max-height: 250px; /* Adjust the maximum height as per your requirement */
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .product-details {
+            flex: 2;
+            min-width: 300px;
+        }
+        .product-title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .product-price {
+            font-size: 20px;
+            color: #e74c3c;
+            margin-top: 10px;
+        }
+        .original-price {
+            text-decoration: line-through;
+            color: #999999;
+            margin-left: 10px;
+        }
+        .product-description,
+        .size-options,
+        .delivery-options,
+        .product-details-section {
+            margin-top: 20px;
+        }
+        .size-options button,
+        .delivery-options button,
+        .add-to-bag,
+        
+        .delivery-options button:hover,
+        .add-to-bag:hover,
+    
+        .delivery-options input {
+            padding: 10px;
+            width: 200px;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 50px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            margin-bottom: 5px;
+        }
+        .specifications {
+            margin-top: 20px;
+        }
+        .specifications h3 {
+            margin-bottom: 10px;
+        }
+        .specifications ul {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .specifications ul li {
+            width: 48%;
+            margin-bottom: 5px;
+        }
+        @media (max-width: 768px) {
+            .product-images img {
+                width: 100%;
+            }
+            .size-options button,
+            .delivery-options button,
+            .add-to-bag,
+            .wishlist {
+                width: 100%;
+                margin: 5px 0;
+            }
+            .delivery-options input {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <img src="Pimages/MyntraLogo.png" alt="Logo">
+</div>
+
+<div class="container">
+    <div class="carousel">
+        <div class="product-images">
+            <img src="Pimages/tiiz8_512.webp" alt="Product Image 1">
+            <img src="Pimages/xxcnw_512.webp" alt="Product Image 2">
+            <img src="Pimages/il_1080xN.2865328679_r8js.jpg" alt="Product Image 3">
+            <img src="Pimages/il_570xN.4204110852_ducs.jpg" alt="Product Image 4">
+            <img src="Pimages/embroidered-blouse-500x500.webp" alt="Product Image 5">
+        </div>
+    </div>
+    <div class="product-details">
+        <div class="product-title">KALINI Embroidered Regular Sequinned Chanderi Silk Straight Kurta With Trousers & Dupatta</div>
+        <div class="product-price">₹1649 <span class="original-price">₹6599</span> Purchase Price</div>
+        <div class="product-description">
+            <p>Rama blue embroidered Kurta with Trousers and dupatta</p>
+            <ul>
+                <li>Kurta design: Ethnic motif embroidered, Straight shape, Regular style, V-neck, three-quarter regular sleeves, No pockets, sequinned detail, calf length with straight hem, Chanderi silk machine weave fabric</li>
+                <li>Trousers design: Solid Trousers, Partially elasticated waistband, Slip-on closure</li>
+                <li>Dupatta design: Printed, Taping border</li>
+            </ul>
+        </div>
+        <div class="size-options">
+            <span>Select Size: </span>
+            <button>S</button>
+            <button>M</button>
+            <button>L</button>
+            <button>XL</button>
+            <button>XXL</button>
+        </div>
+        <div class="delivery-options">
+            <input type="text" placeholder="Enter pincode">
+            <button>Check</button>
+        </div>
+        <button class="add-to-bag">Buy Now</button>
+        <div class="product-details-section">
+            <h3>Product Details</h3>
+            <ul>
+                <li>Material & Care</li>
+                <li>Kurta Fabric: Viscose Chanderi Silk</li>
+                <li>Bottom: Viscose Chanderi Silk</li>
+                <li>Dupatta Fabric: Chanderi Silk</li>
+                <li>Dry Clean</li>
+            </ul>
+        </div>
+        <div class="specifications">
+            <h3>Specifications</h3>
+            <ul>
+                <li>Three-Quarter Sleeves</li>
+                <li>V-Neck</li>
+                <li>Solid Trousers</li>
+                <li>Printed Dupatta</li>
+                <li>Straight Shape</li>
+                <li>Regular Style</li>
+            </ul>
+        </div>
+        <div class="product-code">
+            <p>Product Code: 29505276</p>
+            <p>Seller: VAIDEHI FASHION</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.querySelectorAll('.size-options button').forEach(button => {
+        button.addEventListener('click', function() {
+            document.querySelectorAll('.size-options button').forEach(btn => btn.style.backgroundColor = '#ff3f6c');
+            this.style.backgroundColor = '#e73157';
+        });
+    });
+
+    document.querySelector('.fa-bag-shopping').addEventListener('click', function() {
+    alert('Added to bag');
+    // Add your logic here for adding the product to the bag
+});
+
+// Functionality for adding to wishlist
+document.querySelector('.fa-heart').addEventListener('click', function() {
+    alert('Added to wishlist');
+    // Add your logic here for adding the product to the wishlist
+});
+</script>
+
+</body>
+</html>
